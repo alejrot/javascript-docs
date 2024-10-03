@@ -1,1 +1,100 @@
-site_name: My Docs
+site_name: JavaScript Docs
+
+
+
+# Repositorio
+repo_url: https://github.com/MarceloMarot/javascript-docs
+repo_name: javascript-docs
+edit_uri: edit/master/docs/
+
+copyright: Copyright &copy; 2024 Marcelo Marot Rosas
+
+
+
+theme:
+  name: material
+  language: es
+  font: false   # previene carga de Google Fonts
+
+  icon: 
+    # logo: fontawesome/solid/user-nurse
+    # logo: fontawesome/brands/node-js  # :fontawesome-brands-node-js:
+    # logo: fontawesome/brands/node # :fontawesome-brands-node:
+    logo: simple/javascript # :simple-javascript:
+  
+  palette:
+  # Palette toggle for light mode
+  # - media: "(prefers-color-scheme)"
+  #   toggle:
+  #     icon: material/lightbulb-auto
+  #     name: Modo automático
+      
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: yellow
+    # accent: lime 
+    accent: light green
+    toggle:
+      icon: material/lightbulb 
+      name: Modo claro
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: yellow
+    # accent: lime 
+    accent: light green
+    toggle:
+      icon: material/lightbulb-outline
+      name: modo oscuro
+
+  features:
+    # carga instantánea (requiere site_url)
+    - navigation.instant
+    - navigation.instant.preview
+    # indice flotante (a derecha tipicamente)
+    # - navigation.tabs
+    # sugerencias de busqueda y remarcar resultados
+    - search.suggest
+    - search.highlight
+    - search.share    # boton compartir
+    # header
+    - header.autohide # oculytamiento automatico
+    - navigation.footer
+
+    - content.code.copy # copiad bloques de codigo
+    - content.code.annotate # anotaciones desplegables en código
+    
+    - content.tabs.link # pestañas interna solidarias
+
+# extra_css:
+#   - stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# nav:
