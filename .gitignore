@@ -3,3 +3,15 @@ site/
 venv/
 .cache/
 __pycache__/
+
+
+site      
+.cache    
+.venv
+venv
+
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.bmp

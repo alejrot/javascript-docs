@@ -21,7 +21,36 @@ theme:
     # logo: fontawesome/brands/node-js  # :fontawesome-brands-node-js:
     # logo: fontawesome/brands/node # :fontawesome-brands-node:
     logo: simple/javascript # :simple-javascript:
-  
+    # iconos de avance y retroceso 
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    # Icono de repositorio    
+    repo: fontawesome/brands/github
+    #  iconos de etiquetas
+    tag:
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+      yaml: simple/yaml
+      python: fontawesome/brands/python
+      docker: fontawesome/brands/docker
+      podman: simple/podman
+      markdown: fontawesome/brands/markdown
+      mkdocs: simple/materialformkdocs
+      ts: simple/typescript
+      csv: fontawesome/solid/file-csv
+      bash: simple/gnubash
+      express: simple/express
+      reactjs: simple/react
+      nodejs: fontawesome/brands/node-js
+
+      # icono comodín
+      # default: material/cursor-default-click
+
+
+  # carpeta local con extras (opcional)
+  # custom_dir: overrides
+
   palette:
   # Palette toggle for light mode
   # - media: "(prefers-color-scheme)"
@@ -49,30 +78,103 @@ theme:
       icon: material/lightbulb-outline
       name: modo oscuro
 
+
   features:
+
+    - content.tabs.link         # pestañas sincronizadas
+    - content.code.copy         # botón de copia 
+    - content.code.annotate     # botones de anotaciones emergentes
     # carga instantánea (requiere site_url)
     - navigation.instant
     - navigation.instant.preview
-    # indice flotante (a derecha tipicamente)
-    # - navigation.tabs
+    - navigation.instant.progress   # progreso de carga (conexiones lentas)
+    - navigation.tracking
+    # pestañas de contenido
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
+    - navigation.expand
+    - navigation.top  # boton emergente para volver al inicio  - aparece al intentar subir con el scroll
+    # Pie de pagina
+    - navigation.footer
+
     # sugerencias de busqueda y remarcar resultados
     - search.suggest
     - search.highlight
     - search.share    # boton compartir
     # header
-    - header.autohide # oculytamiento automatico
-    - navigation.footer
+    - header.autohide # ocultamiento automatico
 
     - content.code.copy # copiad bloques de codigo
     - content.code.annotate # anotaciones desplegables en código
     
     - content.tabs.link # pestañas interna solidarias
+    # header y anuncios
+    - header.autohide
+    - announce.dismiss
 
-# extra_css:
-#   - stylesheets/extra.css
+    # acciones sobre repositorio
+    # - content.action.edit
+    - content.action.view
+
+    # tooltips
+    - content.tooltips
+
+
+extra_css:
+  # - stylesheets/extra.css
+  - stylesheets/iconos.css
 
 plugins:
+ # Imagenes
+  - glightbox
+
+  # privacidad - hace copia local de contenidos remotos
+  - privacy
+
+  # busqueda
   - search
+
+  # etiquetas
+
+  - tags:
+      tags_file: tags.md
+
+  # fechas de repositorio
+  - git-revision-date-localized:
+      enabled: true
+      enable_creation_date: true
+      type: date        # fecha
+      # type: datetime    # fecha y hora
+      # type: iso_date    # fecha ISO (sólo numeros)
+      # type: iso_datetime  # fecha ISO (sólo numeros)
+      # type: timeago       # tiempo desde publicación
+      fallback_to_build_date: true
+
+
+extra:
+  # homepage: https://github.com/MarceloMarot/javascript-docs
+  # homepage: /
+
+  # Etiquetas de contenidos
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+    YAML: yaml
+    Python: python
+    Docker: docker 
+    Podman: podman 
+    MarkDown: markdown
+    MkDocs: mkdocs
+    TypeScript: ts
+    CSV: csv
+    Bash: bash 
+    Express: express
+    ReactJS: reactjs
+    NodeJS: nodejs
+
+
 
 markdown_extensions:
   - abbr
@@ -97,4 +199,17 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
-# nav:
+nav:
+  - Indice: index.md
+  - JavaScript:
+    - Comenzando: JS/comenzando.md
+    - Document Object Model (DOM): JS/DOM.md
+
+  - NodeJS: NodeJS.md
+  - TypeScript: TypeScript.md
+
+  - ReactJS: React.md 
+
+  - Express: Express.md
+
+  - Indice de tags: tags.md

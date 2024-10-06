@@ -1,0 +1,65 @@
+
+.rojo {
+    /* color en RGB o RGBA */
+    color: #B00000;
+}
+
+.verde {
+    /* color en RGB o RGBA */
+    color:yellowgreen;
+}
+
+.gris {
+    /* color en RGB o RGBA */
+    color: #777;
+}
+
+.oro{
+    color:gold;
+}
+
+.cian{
+    color: cyan;
+}
+
+.teal{
+    color: teal;
+}
+
+
+.indigo{
+
+    color: #03A;
+}
+
+.gigante {
+    /* dimensiones relativas al tamaño de fuente */
+    font-size: 3em;     
+}
+
+
+
+.grande {
+    /* dimensiones relativas al tamaño de fuente */
+    font-size: 2em;     
+}
+
+.normal{
+  /* dimensiones relativas al tamaño de fuente */
+  font-size: 1em;     
+}
+
+
+
+@keyframes corazon {
+    0%, 40%, 80%, 100% {
+      transform: scale(1);
+    }
+    20%, 60% {
+      transform: scale(1.15);
+    }
+  }
+  
+.corazon {
+    animation: corazon 1000ms infinite;
+  }
