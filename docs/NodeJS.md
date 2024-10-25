@@ -1,5 +1,29 @@
+---
+tags:
+#   - HTML5
+  - JavaScript
+  # - CSS
+#   - YAML
+#   - MkDocs
+#   - Python
+#   - Docker
+#   - Podman
+  # - MarkDown
+#   - TypeScript
+  # - CSV
+#   - Bash
+#   - Express
+#   - ReactJS
+  - NodeJS
+  - NPM
+  - PNPM
+  # - ViteJS
+---
 
-## [Volver al Indice](../Index.md#nodejs)
+
+https://www.npmjs.com/
+
+https://pnpm.io/installation
 
 
 Referencia: Nodejs Curso Desde Cero, para principiantes - Fazt
@@ -15,7 +39,7 @@ https://nodejs.org
 Es un entorno de ejecución para crear aplicaciones de backend, de escritorio y aplicaciones móviles escritas en Javascript. Esto permite utilizar la ventana de comandos del sistema operativo en vez de un navegador de Internet. Está orientado a eventos asincronos.
 
 (Los eventos asincronos se ejecutan independientemente del proceso principal de la aplicacion).
-Basado en el motor V8 de Google. (El motor es el software que eejcuta código)
+Basado en el motor V8 de Google. (El motor es el software que ejcuta código)
 
 
 Para conocer la version de NodeJS instalada escribir en terminal:
@@ -304,6 +328,8 @@ npm start
 ```
 el archivo 'package-lock.json' describe el arbol generado y las guarda para futuras instalaciones.
 
+
+## Eventos
 
 **Evento** --> Accion realizada en al aplicacion. Es una accion que desencadena un proceso
 Node está basado en eventos asincronos

@@ -43,6 +43,10 @@ theme:
       express: simple/express
       reactjs: simple/react
       nodejs: fontawesome/brands/node-js
+      npm:  material/npm
+      pnpm: simple/pnpm
+      vitejs: simple/vite
+      tsnode: simple/tsnode
 
       # icono comodín
       # default: material/cursor-default-click
@@ -62,8 +66,7 @@ theme:
   - media: "(prefers-color-scheme: light)"
     scheme: default
     primary: yellow
-    # accent: lime 
-    accent: light green
+    accent: amber
     toggle:
       icon: material/lightbulb 
       name: Modo claro
@@ -72,8 +75,8 @@ theme:
   - media: "(prefers-color-scheme: dark)"
     scheme: slate
     primary: yellow
-    # accent: lime 
-    accent: light green
+    accent: amber
+    # accent: light green
     toggle:
       icon: material/lightbulb-outline
       name: modo oscuro
@@ -130,7 +133,7 @@ plugins:
   - glightbox
 
   # privacidad - hace copia local de contenidos remotos
-  - privacy
+  # - privacy
 
   # busqueda
   - search
@@ -173,8 +176,10 @@ extra:
     Express: express
     ReactJS: reactjs
     NodeJS: nodejs
-
-
+    NPM: npm
+    PNPM: pnpm
+    ViteJS: vitejs
+    TSNode: tsnode
 
 markdown_extensions:
   - abbr
@@ -202,11 +207,23 @@ markdown_extensions:
 nav:
   - Indice: index.md
   - JavaScript:
-    - Comenzando: JS/comenzando.md
-    - Document Object Model (DOM): JS/DOM.md
+    - Comenzando: js/comenzando.md
+    - Document Object Model (DOM): js/DOM.md
 
   - NodeJS: NodeJS.md
-  - TypeScript: TypeScript.md
+
+  - TypeScript: 
+      - Introducción: ts/intro-ts.md
+      - TS-Node: ts/tsnode.md
+      - ejecutar: ts/ejecutar.md
+      - tipado: ts/tipado.md  
+      - datos primitivos: ts/primitivos.md  
+      - datos compuestos: ts/compuestos.md  
+      - funciones: ts/funciones.md
+      - clases: ts/clases.md
+      - interfases: ts/interfases.md
+      - tipos: ts/tipos.md
+      - TS:  ts/TypeScript.md
 
   - ReactJS: React.md 
 

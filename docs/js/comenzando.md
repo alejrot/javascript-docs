@@ -15,6 +15,9 @@ tags:
 #   - Express
 #   - ReactJS
 #   - NodeJS
+  # - NPM
+  # - PNPM
+#   - ViteJS
 ---
 
 # JavaScript
@@ -51,10 +54,13 @@ console.error("Mi mensaje de error")    //crea un mensaje de error
 La consola ayuda al debug de los sitios web en desarrollo.
 
 ## Document
+
 Esta instrucción permite interactuar con el archivo HTML que invoque la rutina. Ejemplo:
 ```javascript
 document.write("<h1>Hallo Welt!</h1>");  // Escribe un título
 ```
+
+
 ## Tipos de Datos
 
 - ### Cadenas de caracteres (*string*)

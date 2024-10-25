@@ -1,7 +1,25 @@
-
-## [Volver al Indice](../Index.md#typescript)
-
-
+---
+tags:
+#   - HTML5
+  - JavaScript
+  # - CSS
+#   - YAML
+#   - MkDocs
+#   - Python
+#   - Docker
+#   - Podman
+  # - MarkDown
+#   - TypeScript
+  # - CSV
+#   - Bash
+#   - Express
+  - ReactJS
+  - NodeJS
+  - NPM
+  - PNPM
+#   - ViteJS
+  - TSNode
+---
 
 # TypeScript
 
@@ -14,11 +32,14 @@ Sitio oficial: https://www.typescriptlang.org
 TS es un superconjunto de JavaScript creado por Microsoft en 2012 para usar JavaScript compilado.
 
 TS añade tipado fuerte a JS, por lo demás es casi igual.
-El compilador de TS ayuda a detectar errores de sintaxis sin necesidad de ejecutar todas las partes del programa y las convierte a JavaScript. Ventajas:
+El compilador de TS ayuda a detectar errores de sintaxis sin necesidad de ejecutar todas las partes del programa 
+y las convierte a JavaScript.
+Ventajas:
+
 - Prevencion de errores por tipos de datos erroneos
 - Facilidad de desarrollo: el interprete propone métodos y acordes a los tipos de datos elegidos
 
-
+<!-- 
 ## Instalaciones - TS Node
 
 Instalar NodeJS y luego instalar por terminal Typescript (normalmente se hace en modo global)
@@ -40,9 +61,12 @@ tsc --version
 ts-node --version
 ```
 
-Sitio de TS Node: https://typestrong.org/ts-node/docs/
+Sitio de TS Node: https://typestrong.org/ts-node/docs/ 
+-->
 
 
+
+<!-- 
 ## Compilacion
 ## Extensión y compilacion
 
@@ -58,8 +82,10 @@ En cambio, para interpretar directamente el código se usa el comando *ts-node*:
 ```bash
 ts-node <nombre_rutina>.ts
 ```
+ -->
 
 
+<!-- 
 ## Modo observador
 
 El modo observador se usa añadiendo la opcion -w (*watch*) a la compilación
@@ -79,6 +105,14 @@ Esto crea un archivo *tsconfig.json* con las opciones de compilacion prearmadas.
 ```bash
     tsc -w
 ```
+ -->
+
+
+
+
+
+
+<!-- 
 ## Tipado de datos
 
 TS asigna un tipo de datos a cada variable automáticamente al asignarle un valor. Este tipo de datos no puede ser alterado a posteriori. Por ejemplo, si una variable al ser creada se le asignó una cadena de texto esta se puede cambiar; sin embargo TS no permitirá guardar en la variable un numero entero, un flotante o cualquier otra cosa que no sea una cadena de caracteres.
@@ -110,9 +144,12 @@ En el ejemplo 'String' es una interfase en tanto que 'string' es un dato primiti
   - clase
   - interface
   - type
+ -->
 
+<!-- 
 
 ## Datos primitivos
+
 ### Number
 
 Los numeros se tipean indicando el nombre de variable, dos puntos (:) y la palabra *'number'*.
@@ -153,6 +190,11 @@ indefinido = undefined
 let variable_null: null;
 variable_null = null;
 ```
+ -->
+
+
+<!-- 
+
 ## Datos compuestos
 
 ### Objetos
@@ -188,6 +230,11 @@ enum Colores{
     Azul="azul",
 }
 ```
+ -->
+
+
+
+<!-- 
 
 ### Funciones
 
@@ -220,8 +267,11 @@ y valores de defecto asignados tras el tipeo:
 
 ```typescript
 const dividir = (a: number,b: number = 1) => a / b;
-```
+``` -->
 
+
+
+<!-- 
 ### Clases
 De las clases se tipean tanto los *atributos* como los *constructores*:
 ```typescript
@@ -236,6 +286,9 @@ Class Persona{
 }
 ```
 Nota al pie: 'atributos' son las variables internas de la clasa, las cuales serán afectadas por los métodos; en tanto que los 'constructores' son las variables auxiliares que se usan para inicializar la *instancia* (es decir la estructura de datos con la forma y métodos de la clase)
+ -->
+
+<!-- 
 
 ### Interface
 
@@ -272,7 +325,13 @@ interface Persona {
     saludar(): void;
 }
 ```
+ -->
 
+
+
+
+
+<!-- 
 ### Types
 
 Se pueden crear tipos de datos personalizados usando la palabra reservada *'type'*
@@ -324,7 +383,10 @@ type Persona2 = {
     saludar(): void;
 }
 ```
+ -->
 
+
+<!-- 
 ## Encapsulamiento y genéricos
 
 El encapsulamiento consiste en hacer privados a los atributos de las clases y acceder a ellos únicamente mediante los métodos dedicados para ello, llamados genéricamente 'getters' (lectura: *get*) y 'setters' (escritura: *set*)
@@ -369,16 +431,12 @@ let sorteo = new Sorteo< string >("Paco")
 sorteo.setTicket("S3")
 console.log(sorteo.sortear())
 ```
+ -->
 
+<!-- 
 ## React en TS
 
 ReactJS puede usarse con TS. Mediante Vite se puede crear un proyecto con la opción 'TypeScript+ SWC' ,se instalan los paquetes necesarios localmente (npm install) y el resultado es un proyecto cuyo código de componentes se guarda en archivos con extensión .tsx en vez de .jsx.
 
 Al finalizar el trabajo se construye el proyecto con 'npm run build'.
-
----
----
-
-## [Volver a Inicio](#typescript)
-
-## [Volver al Indice](../Index.md#typescript)
+ -->
