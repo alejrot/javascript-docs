@@ -1,9 +1,11 @@
 site_name: JavaScript Docs
 
+site_description: Documentación y tutoriales sobre JavaScrip, sus derivados y sus herramientas asociadas
+# site_url: https://alejrot.github.io/javascript-docs/
 
 
 # Repositorio
-repo_url: https://github.com/MarceloMarot/javascript-docs
+repo_url: https://github.com/alejrot/javascript-docs
 repo_name: javascript-docs
 edit_uri: edit/master/docs/
 
@@ -156,8 +158,6 @@ plugins:
 
 
 extra:
-  # homepage: https://github.com/MarceloMarot/javascript-docs
-  # homepage: /
 
   # Etiquetas de contenidos
   tags:
@@ -210,20 +210,27 @@ nav:
     - Comenzando: js/comenzando.md
     - Document Object Model (DOM): js/DOM.md
 
-  - NodeJS: NodeJS.md
+  - NodeJS: 
+    - NodeJS - Introducción: node/intro-node.md
+    - Módulos: node/modulo.md
+    - JSON: node/json.md
+    - Asincronía: node/asincronia.md
+    - NPM: node/npm.md
+    - Eventos y Promesas: node/eventos_promesas.md
+    - Modelo Cliente - Servidor: node/cliente-servidor.md
+
 
   - TypeScript: 
-      - Introducción: ts/intro-ts.md
-      - TS-Node: ts/tsnode.md
-      - ejecutar: ts/ejecutar.md
-      - tipado: ts/tipado.md  
-      - datos primitivos: ts/primitivos.md  
-      - datos compuestos: ts/compuestos.md  
-      - funciones: ts/funciones.md
-      - clases: ts/clases.md
-      - interfases: ts/interfases.md
-      - tipos: ts/tipos.md
-      - TS:  ts/TypeScript.md
+    - TypeScript - Introducción: ts/intro-ts.md
+    - TS-Node: ts/tsnode.md
+    - Ejecutar: ts/ejecutar.md
+    - Tipado: ts/tipado.md  
+    - Datos primitivos: ts/primitivos.md  
+    - Datos compuestos: ts/compuestos.md  
+    - Funciones: ts/funciones.md
+    - Clases: ts/clases.md
+    - Interfases: ts/interfases.md
+    - Tipos: ts/tipos.md
 
   - ReactJS: React.md 
 
