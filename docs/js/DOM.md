@@ -41,9 +41,9 @@ document.getElementByID(<identificador>)
 document.getElementByClassName(<identificador>)
 ```
 
-### Metodos modernos
+### Métodos modernos
 
-***QuerySelector()*** devuelve el primer elemento encontrado en tanto que ***querySelectorAll()*** los devuelve a todos.
+`QuerySelector()` devuelve el primer elemento encontrado en tanto que `querySelectorAll()` los devuelve a todos.
 
 ```javascript
 document.querySelector(<elemento>)
@@ -59,7 +59,7 @@ app.innerHTML = "<strong> Hola a todos </strong>";
 
 ### Crear elementos
 
-Está el método ***.createElement()***
+Está el método `createElement()`
 
 ```javascript
 const div = document.createElement('div');
@@ -124,18 +124,19 @@ document.body.appendChild(fragmento);    //subida al HTML
 
 Estándar:
 
-- ***.nodename***
-- ***.textContent*** 
-- ***.innerHTML***
-- ***.outerHTML***
+- `nodename`
+- `textContent`
+- `innerHTML`
+- `outerHTML`
 
 Exclusivos de Internet Explorer (*evitar como a la peste*):
-- ***.innerText***
-- ***.outerText***
 
-***nodeName*** nos devuelve el nombre del conjunto en mayusculas.
+- `innerText`
+- `outerText`
 
-***textContent*** permite leer y excribir por asignacion el texto de un elemento:
+`nodeName` nos devuelve el nombre del conjunto en mayusculas.
+
+`textContent` permite leer y excribir por asignacion el texto de un elemento:
 
 ```javascript
 const div = document.querySelector("div");
@@ -143,7 +144,7 @@ div.textContent = "Hola a todos"; //asignacion
 div.textContent;  //lectura
 ```
 
-***innerHTML*** permite leer y escribir interpretando y renderizando código HTML:
+`innerHTML` permite leer y escribir interpretando y renderizando código HTML:
 
 ```javascript
 const div = document.querySelector("div");
@@ -152,7 +153,7 @@ div.innerHTML;  //lee "<strong>Importante</strong>"
 div.textContent;  //lee "Importante"
 ```
 
-***outerHTML*** es como *innerHTML* pero incluye la información del elemento mismo. Esto permite reemplazar elementos:
+`outerHTML` es como `innerHTML` pero incluye la información del elemento mismo. Esto permite reemplazar elementos:
 
 ```javascript
 const data = document.querySelector(".data");
@@ -164,7 +165,7 @@ data.outerHTML;     // "<div class="data"><h1>Tema 1</h1></div>"
 ```
 
 ### Insertar Elementos al DOM
-*appendChild()* añade un elemento afl final del *body*, justo antes de cerrarlo.
+`appendChild()` añade un elemento al final del `body`, justo antes de cerrarlo.
 
 ```javascript
 //creacion de un elemento imagen
@@ -175,18 +176,18 @@ img.alt = "<descripcion_imagen>"
 document.body.appendChild(img);
 ```
 
-*insertAdjacent\*()* es una familia de metodos para insertar elemetos de distintos tipos y en distintas ubicaciones:
+`insertAdjacent*()` es una familia de metodos para insertar elemetos de distintos tipos y en distintas ubicaciones:
 
-- ***.insertAdjacentElement(***) --> Objeto Element.
-- ***.insertAdjacentHTML()*** --> Código HTML.
-- ***.insertAdjacentText()*** --> NODE con texto.
+- `insertAdjacentElement()` --> Objeto Element.
+- `insertAdjacentHTML()` --> Código HTML.
+- `insertAdjacentText()` --> NODE con texto.
   
 El segundo parámetro de estos métodos es nombre (descriptor)del elemento a insertar y el primer parámetro es la ubicación relativa respecto a las etiquetas del elemento modificado. Opciones:
 
-- ***beforebegin*** : Antes de la etiqueta HTML de apertura. (afuera del elemento)
-- ***afterbeguin*** : Después de la etiqueta HTML de apertura. (adentro del elemento)
-- ***beforeend*** : Antes de la etiqueta HTML de cierre. (adentro del elemento)
-- ***afterend*** : Después de la etiqueta HTML de cierre. (afuera del elemento)
+- `beforebegin`: Antes de la etiqueta HTML de apertura. (afuera del elemento)
+- `afterbeguin`: Después de la etiqueta HTML de apertura. (adentro del elemento)
+- `beforeend`: Antes de la etiqueta HTML de cierre. (adentro del elemento)
+- `afterend`: Después de la etiqueta HTML de cierre. (afuera del elemento)
   
 Uso:
 ```javascript
@@ -197,15 +198,15 @@ Uso:
 
 Los elementos del DOM se pueden "eliminar" (en realidad se desconectan del mismo pero seguirán existiendo). Métodos habituales:
 
-- ***.remove():*** elimina el nodo padre. Uso:
+- `remove()`: elimina el nodo padre. Uso:
   ```javascript
   <elemento_padre>.remove();
   ```
-- ***.removeChild():*** elimina un nodo hijo elegido.
+- `removeChild()`: elimina un nodo hijo elegido.
   ```javascript
   <elemento_padre>.removeChild(<nodo>)
   ```
-- ***.replaceChild():*** reemplaza un elemento hijo por otro nuevo.
+- `replaceChild()`: reemplaza un elemento hijo por otro nuevo.
   ```javascript
   <elemento_padre>.replaceChild(<nuevo_hijo>,<viejo_hijo>)
   ```
@@ -215,19 +216,19 @@ Los elementos del DOM se pueden "eliminar" (en realidad se desconectan del mismo
 
 Hay dos propiedades de JS para acceder y modificar las clases de un elemento HTML:
 
-- ***.className*** : acceso simultáneo a todas las clases asignadas al elemento, que se guardan juntas. Poco práctico para casos de clases múltiples.
-- ***.classList*** : Objeto especial que permite manejar todas las clases CSS por separado, con metodos y propiedades dedicados. 
+- `className` : acceso simultáneo a todas las clases asignadas al elemento, que se guardan juntas. Poco práctico para casos de clases múltiples.
+- `classList` : Objeto especial que permite manejar todas las clases CSS por separado, con metodos y propiedades dedicados. 
 
-El objeto ***.classList*** devuelve un *DOMTokenList* (algo muy parecido a un array) con la lista completa de clases guardadas y posee métodos para trabajar con ellas:
+El objeto `classList` devuelve un *DOMTokenList* (algo muy parecido a un array) con la lista completa de clases guardadas y posee métodos para trabajar con ellas:
 
-- ***.length*** : contea cuantas clases hay
-- ***.item(\<n\>)*** : devuelve el elemento n-esimo. Si no existe da NULL.
-- ***.add(<\clase1\>, <\clase2\>, ...)*** : añade las clases indicadas.
-- ***.remove(<\clase1\>, <\clase2\>, ...)*** : elimina las clases indicadas.
-- ***.contains(<\clase\>)*** : verifica si la clase indicada existe.
-- ***.toggle(<\clase\>)*** : alterna el estado de clase: si existe la borra, sino la crea.
-- ***.toggle(<\clase\>,\<condición\>)*** : alterna el estado de clase sólo si se cumple la condición.
-- ***.replace(<\old\>,\<new\>)*** : reemplaza una clase por otra.
+- `length`: contea cuantas clases hay
+- `item(n)`: devuelve el elemento n-esimo. Si no existe da NULL.
+- `add(clase1, clase2, ...)`: añade las clases indicadas.
+- `remove(clase1, clase2, ...)`: elimina las clases indicadas.
+- `contains(clase)`: verifica si la clase indicada existe.
+- `toggle(clase)`: alterna el estado de clase: si existe la borra, sino la crea.
+- `toggle(clase, condicion)`: alterna el estado de clase sólo si se cumple la condición.
+- `replace(old, new)`: reemplaza una clase por otra.
 
 Ejemplo de uso: reemplazar una clase "claro" por una "oscuro" para cambiar de estilo CSS de una página.
 ```javascript

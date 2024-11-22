@@ -15,7 +15,7 @@ tags:
 #   - Express
   - ReactJS
 #   - NodeJS
-#   - NPM
+  - NPM
 #   - PNPM
   - ViteJS
 ---
@@ -93,7 +93,7 @@ Un ejemplo real de un proyecto construido:
 |dist/assets/index-75012726.js  | 143.87 kB | 
 
 
- Estos archivos se copian al servidor final para que éste los proporcione al cliente.
+Estos archivos se copian al servidor final para que éste los proporcione al cliente.
 
 
 # React
