@@ -28,7 +28,7 @@ Se instala localmente vía NPM:
 ```
 npm install express --save
 ```
-La opcion --save obliga a actualizar el archivo JSON con la nueva dependencia.
+La opcion `--save` obliga a actualizar el archivo JSON con la nueva dependencia.
 
 breves definiciones:
 
