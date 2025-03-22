@@ -1,17 +1,15 @@
 
 services:
 
-  js-docs:
+  javascript-docs:
     build:  .
+    container_name: javascript-docs
     ports:
       - "${PORT:-8000}:8000"
-
     security_opt: 
       - label=disable
-
     volumes:
       - ./:/docs
-
     stdin_open: true
     tty: true
 
